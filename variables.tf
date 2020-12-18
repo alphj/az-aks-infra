@@ -1,11 +1,11 @@
 variable "cluster_name" {
   description = "Variable to provide your desired name for the cluster. The script will create a random name if this is empty"
   type        = string
-  default     = ""
+  default     = "alphjjx"
 }
 variable "location" {
   type        = string
-  default     = "australiaeast"
+  default     = "Central US"
   description = "The Azure region in to which to provision the cluster"
 }
 
@@ -43,7 +43,7 @@ variable "node_size" {
 }
 variable "dns_prefix" {
   type        = string
-  default     = ""
+  default     = "alphj"
   description = "DNS prefix for the cluster. The script will create a random name if this is empty"
 }
 variable "cluster_version" {
@@ -53,17 +53,17 @@ variable "cluster_version" {
 }
 variable "network_resource_group_name" {
   type        = string
-  default     = ""
+  default     = "alphjjx-net-rg"
   description = "The name of the resource group in to which to provision network resources. The script will create a random name if this is empty"
 }
 variable "cluster_resource_group_name" {
   type        = string
-  default     = ""
+  default     = "alphjjx-cluster-rg"
   description = "The name of the resource group in to which to provision AKS managed cluster. The script will create a random name if this is empty"
 }
 variable "cluster_node_resource_group_name" {
   type        = string
-  default     = ""
+  default     = "alphjjx-clusternode-rg"
   description = "Resource group name in which to provision AKS cluster nodes. The script will create a random name if this is empty"
 }
 variable "vnet_cidr" {
@@ -88,7 +88,7 @@ variable "cluster_network_model" {
 }
 variable "subnet_name" {
   type        = string
-  default     = ""
+  default     = "alphjjx-subnet"
   description = "The name of the subnet in Azure to be created. The script will create a random name if this is empty"
 }
 variable "enable_log_analytics" {
@@ -134,7 +134,7 @@ variable "apex_resource_group_name" {
 variable "dns_resource_group_name" {
   type        = string
   description = "Resource group in which to create the Azure DNS zone. The script will create a random name if this is empty"
-  default     = ""
+  default     = "alphjjx-dns-rg"
 }
 
 // ----------------------------------------------------------------------------
@@ -144,17 +144,17 @@ variable "dns_resource_group_name" {
 variable "key_vault_enabled" {
   type        = string
   description = "Flag to indicate whether to provision Azure Key Vault for secret storage"
-  default     = false
+  default     = true
 }
 variable "key_vault_resource_group_name" {
   type        = string
   description = "Resouce group to create in which to place key vault"
-  default     = ""
+  default     = "alphjjx-vault-rg"
 }
 variable "key_vault_name" {
   type        = string
   description = "Name of Azure Key Vault to create"
-  default     = ""
+  default     = "alphjjx-vault"
 }
 variable "key_vault_sku" {
   type        = string
